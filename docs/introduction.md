@@ -1,6 +1,6 @@
 # League of Legends Damage Calculator/Optimizer
 
-Despite the huge popularity of the game, there is a notorious lack of tools and resources for players who would like to test and deepen their knowledge about the game. Although the game itself provides a practice tool for players who look to test out characters capabilities, the functionality of it is limited, restricted to one character (or “champions” as there are called in game) at the time, having to use external tools such as notepad or excel to keep track of results and a lack of control of multiple variables making the theorycrafting and testing for the game inefficient and bothersome.
+Despite the huge popularity of the game, there is a notorious lack of tools and resources for players who would like to test and deepen their knowledge about the game, specifically in the subject of optimizing damage output. Although the game itself provides a practice tool for players who look to test out characters capabilities, the functionality of it is limited, restricted to one character (or “champions” as there are called in game) at the time, having to use external tools such as notepad or excel to keep track of results and a lack of control of multiple variables making the theorycrafting and testing for the game inefficient and bothersome.
 
 ## The proposal
 
@@ -12,11 +12,14 @@ This software is mainly aimed at players with a relatively high level of underst
 
 ### Understanding what we will be calculating
 
-League of Legends is a Multiplayer Online Battle Arena (MOBA) in which two teams of five players battle for resources in the arena in order to spend those resources on equipment for their characters in order to become stronger and defeat the enemy team by destroying their base. How much damage a champion can do is a core aspect of the game due to its player vs player nature and, although there is quite a bit of nuisance to the act of “dealing damage” in game beyond just looking at the numbers and damage formulas, we believe that looking at the numbers specially will give players a solid base from which each user own knowledge will allow them to draw further conclusion for themselves as individuals in each of their games. By this we recognize that we are not trying to “solve” the act of “dealing damage” in the game but provide a solid foundation for experienced players to draw their own conclusions and share them with the community.
+League of Legends is a Multiplayer Online Battle Arena (MOBA) in which two teams of five players battle for resources in the arena in order to spend those resources on equipment for their characters in order to become stronger and defeat the enemy team by destroying their base. How much damage a champion (in-game characters controlled b players) can do is a core aspect of the game due to its player vs player nature and, although there is quite a bit of nuisance to the act of “dealing damage” in game beyond just looking at the numbers and damage formulas, we believe that looking at the numbers specially will give players a solid base from which each user own knowledge will allow them to draw further conclusion for themselves as individuals in each of their games. By this we recognize that we are not trying to “solve” the act of “dealing damage” in the game but provide a solid foundation for experienced players to draw their own conclusions and share them with the community.
 
 ### Defining “dealing damage”.
 
-Each champion in game has a set of base statistics, some of which increase passively during the games as the champions level up. This set of stats are called the champion “base stats''. Let's look at an example for one of League of Legends more iconic champions Ahri:
+As we can see from this small publication[1] from 2014 in a "Journal of Interdiciplanary Science Topics" from the University of Leincester, although the act of dealing damage is a fundamental mechanic of League of Legends and most players have an intuitive understanding of how it works, there is a substantial ammount of variables to consider when calculating damage output. While the mentioned study can provide us with some insight to the act of dealing damage, we found to problems with the approach taken. Firt, damage per second (DPS) can be a misleading metric, this approach of meassuring DPS is only reliable when calculating damage output solely from a champion's basic attack damage on an unresponsive target. This situation is some that will rarely ever happen in a real life game due to both the dynamic nature of any competition between human beings and the fact that most champions do not rely on their basic attacks as their main source of damage. Secondly, there is the problem of defining a time window for which to calculate the DPS. While some champions tilt towards doing consistent damage during a long period of time other rely on dealing their damage during a short window and retreat. By measuring and comparing DPS, the latter group would have a big advantage over the first one while not necesarrily meaning anyone is better than the other. We believe that this sort of scenarios could lead users into misleading conclutions, reason why we decided to focus on calculating raw damage output for each one of a champion's damage sources.
+Even though there is a considerable amount of publications about League of Legends, little to none focuses on in-game mechanics suchs as dealing damage besides the previous mentioned study. Nevertheless, there has been some similar apps built for this purpose, although the ones specifally for League of Legends have not been updated in years in some cases, and we will talk about them and use as references further below when talking about prototypes for our app. 
+
+For starters, each champion in game has a set of base statistics, some of which increase passively during the games as the champions level up. This set of stats are called the champion “base stats''. Let's look at an example for one of League of Legends more iconic champions Ahri:
 
 ![Figure 0 - Ahri’s Base stats at level 0-18 - Source League of Legends wiki](assets/introduction/image7.png){ width=60% height=60% }
 
@@ -140,6 +143,8 @@ We understand that by not implementing these systems into the calculator we will
 Some extra links that could be helpful:
 
 Optimizers and calculators for reference:
+
+[1] Cheryl Hurkett (2014). Journal of Interdisciplinary Science Topics, Volume 3 (page 30). University of Leicester.  
 
 · [Genshin impact optimizer/calculator with tutorials](https://frzyc.github.io/genshin-optimizer)
 
